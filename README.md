@@ -19,7 +19,7 @@ This repository provides a <span class="pl-s">**</span>step-by-step guide<span c
 <span class="pl-s">2</span><span class="pl-v">.</span> Clone the repository or download the model files directly:
    <span class="pl-s">```</span><span class="pl-en">bash</span>
    git clone https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B</pre><div class="zeroclipboard-container">
-    
+     
   </div></div>
 <hr>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="90311702" _msthash="188">第 2 步：将模型转换为 ONNX 格式 🔄</h2><a id="user-content-step-2-convert-the-model-to-onnx-format-" class="anchor" aria-label="永久链接：第 2 步：将模型转换为 ONNX 格式 🔄" href="#step-2-convert-the-model-to-onnx-format-" _mstaria-label="75040225" _msthash="189"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
@@ -49,7 +49,7 @@ This repository provides a <span class="pl-s">**</span>step-by-step guide<span c
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="101116457" _msthash="191">第 3 步：将 ONNX 转换为 TensorFlow 模型 🔧</h2><a id="user-content-step-3-convert-onnx-to-tensorflow-model-" class="anchor" aria-label="永久链接：第 3 步：将 ONNX 转换为 TensorFlow 模型 🔧" href="#step-3-convert-onnx-to-tensorflow-model-" _mstaria-label="76596923" _msthash="192"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><font _mstmutation="1" _msttexthash="95661397" _msthash="193">使用该库将 ONNX 模型转换为 TensorFlow 格式：</font><code>onnx-tf</code></p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>pip install onnx-tf</pre><div class="zeroclipboard-container">
-   
+    
   </div></div>
 <p dir="auto" _msttexthash="42850665" _msthash="194">然后运行以下脚本：</p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>from onnx_tf.backend import prepare
@@ -68,7 +68,7 @@ tf_rep.export_graph(<span class="pl-s"><span class="pl-pds">"</span>deepseek_mod
 <p dir="auto" _msttexthash="208720980" _msthash="197">通过将模型转换为 TensorFlow Lite （TFLite） 模型来减小模型大小。</p>
 <p dir="auto" _msttexthash="25591501" _msthash="198">安装 TensorFlow Lite：</p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>pip install tensorflow</pre><div class="zeroclipboard-container">
-    
+     
   </div></div>
 <p dir="auto" _msttexthash="23618192" _msthash="199">运行脚本：</p>
 <div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">import</span> <span class="pl-s1">tensorflow</span> <span class="pl-k">as</span> <span class="pl-s1">tf</span>
@@ -80,7 +80,7 @@ tf_rep.export_graph(<span class="pl-s"><span class="pl-pds">"</span>deepseek_mod
 <span class="pl-c"># Save the TFLite model</span>
 <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">"deepseek_model.tflite"</span>, <span class="pl-s">"wb"</span>) <span class="pl-k">as</span> <span class="pl-s1">f</span>:
     <span class="pl-s1">f</span>.<span class="pl-c1">write</span>(<span class="pl-s1">tflite_model</span>)</pre><div class="zeroclipboard-container">
-    
+     
   </div></div>
 <hr>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="131697891" _msthash="200">第 5 步：将 TFLite 模型集成到 Android 应用中 📱</h2><a id="user-content-step-5-integrate-the-tflite-model-into-android-app-" class="anchor" aria-label="永久链接：第 5 步：将 TFLite 模型集成到 Android 应用中 📱" href="#step-5-integrate-the-tflite-model-into-android-app-" _mstaria-label="90302277" _msthash="201"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
@@ -88,7 +88,7 @@ tf_rep.export_graph(<span class="pl-s"><span class="pl-pds">"</span>deepseek_mod
 <p dir="auto"><font _mstmutation="1" _msttexthash="151479107" _msthash="204">将 TensorFlow Lite 依赖项添加到您的 Android 应用的 ：</font><code>build.gradle</code></p>
 <div class="highlight highlight-source-groovy-gradle notranslate position-relative overflow-auto" dir="auto"><pre>implementation <span class="pl-s"><span class="pl-pds">'</span>org.tensorflow:tensorflow-lite:2.12.0<span class="pl-pds">'</span></span>
 implementation <span class="pl-s"><span class="pl-pds">'</span>org.tensorflow:tensorflow-lite-support:0.4.0<span class="pl-pds">'</span></span></pre><div class="zeroclipboard-container">
-   
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="37255270" _msthash="205">创建简单的聊天界面</h3><a id="user-content-create-a-simple-chat-interface" class="anchor" aria-label="永久链接： 创建一个简单的聊天界面" href="#create-a-simple-chat-interface" _mstaria-label="1151202" _msthash="206"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto" _msttexthash="213449418" _msthash="207">使用 <strong _istranslated="1">Jetpack Compose</strong> 实现类似聊天的 UI。以下是完整的 Kotlin 代码：</p>
@@ -149,7 +149,7 @@ implementation <span class="pl-s"><span class="pl-pds">'</span>org.tensorflow:te
         }
     }
 }</pre><div class="zeroclipboard-container">
-    
+   
   </div></div>
 <hr>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="23679097" _msthash="208">流程图 📊</h2><a id="user-content-flow-diagram-" class="anchor" aria-label="永久链接：流程图 📊" href="#flow-diagram-" _mstaria-label="41922374" _msthash="209"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
@@ -215,6 +215,6 @@ E --&gt; F[Chat Interface for Interaction]
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>
 Feel free to copy, customize, and upload it to your GitHub repository! 😊
 </code></pre><div class="zeroclipboard-container">
-   
+     
   </div></div>
 </article></div>
