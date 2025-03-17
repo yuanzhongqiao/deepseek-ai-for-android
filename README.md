@@ -178,46 +178,7 @@ fun ChatScreen() {
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="23679097" _msthash="208">流程图 📊</h2><a id="user-content-flow-diagram-" class="anchor" aria-label="永久链接：流程图 📊" href="#flow-diagram-" _mstaria-label="41922374" _msthash="209"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto" _msttexthash="76855506" _msthash="210">以下是完整过程的简单流程图：</p>
 <section class="js-render-needs-enrichment render-needs-enrichment position-relative" data-identity="9953b907-4491-49a4-968c-1b81ab733d55" data-host="https://viewscreen.githubusercontent.com" data-src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com" data-type="mermaid" aria-label="Mermaid 渲染输出容器" _mstaria-label="906295" _msthash="211">
-  <div class="js-render-enrichment-target" data-json="{&quot;data&quot;:&quot;graph TD\nA[Download DeepSeek Model] --&amp;gt; B[Convert to ONNX]\nB --&amp;gt; C[Convert to TensorFlow]\nC --&amp;gt; D[Convert to TensorFlow Lite]\nD --&amp;gt; E[Integrate into Android App]\nE --&amp;gt; F[Chat Interface for Interaction]\n&quot;}" data-plain="graph TD
-A[Download DeepSeek Model] --> B[Convert to ONNX]
-B --> C[Convert to TensorFlow]
-C --> D[Convert to TensorFlow Lite]
-D --> E[Integrate into Android App]
-E --> F[Chat Interface for Interaction]
-" dir="auto"><!----><!----><div class="position-absolute top-0 pr-2 right-0 d-flex flex-justify-end flex-items-center">
-    
-    <details class="details-reset details-overlay details-overlay-dark" style="display: contents">
-      <summary role="button" aria-label="“打开”对话框" class="btn my-2 mr-2 p-0 d-inline-flex" aria-haspopup="dialog" _mstaria-label="154752" _msthash="212">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="octicon m-2">
-          <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path>
-        </svg>
-      </summary>
-      <details-dialog class="Box Box--overlay render-full-screen d-flex flex-column anim-fade-in fast" aria-label="mermaid rendered container" role="dialog" aria-modal="true" _msthidden="1" _mstaria-label="611598" _msthash="213">
-        <div _msthidden="1">
-          <button aria-label="Close dialog" data-close-dialog="" type="button" data-view-component="true" class="Link--muted btn-link position-absolute render-full-screen-close" _msthidden="A" _mstaria-label="177619" _msthash="214">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:text-bottom" class="octicon octicon-x">
-              <path fill-rule="evenodd" d="M5.72 5.72a.75.75 0 011.06 0L12 10.94l5.22-5.22a.75.75 0 111.06 1.06L13.06 12l5.22 5.22a.75.75 0 11-1.06 1.06L12 13.06l-5.22 5.22a.75.75 0 01-1.06-1.06L10.94 12 5.72 6.78a.75.75 0 010-1.06z"></path>
-            </svg>
-          </button>
-          <div class="Box-body border-0" role="presentation"></div>
-        </div>
-      </details-dialog>
-    </details>
-  <!----> 
-  </div><!---->
-    <div class="render-container color-bg-transparent js-render-target p-0 is-render-automatic is-render-requested is-render-ready" data-identity="9953b907-4491-49a4-968c-1b81ab733d55" data-host="https://viewscreen.githubusercontent.com" data-type="mermaid" style="height: 694px;">
-      <iframe title="File display" role="presentation" class="render-viewer" sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups" src="https://viewscreen.githubusercontent.com/markdown/mermaid?docs_host=https%3A%2F%2Fdocs.github.com&amp;color_mode=light#9953b907-4491-49a4-968c-1b81ab733d55" name="9953b907-4491-49a4-968c-1b81ab733d55" data-content="{&quot;data&quot;:&quot;graph TD\nA[Download DeepSeek Model] --&amp;gt; B[Convert to ONNX]\nB --&amp;gt; C[Convert to TensorFlow]\nC --&amp;gt; D[Convert to TensorFlow Lite]\nD --&amp;gt; E[Integrate into Android App]\nE --&amp;gt; F[Chat Interface for Interaction]\n&quot;}">
-      </iframe>
-    </div>
-  <!----><!----></div>
-  <span class="js-render-enrichment-loader d-flex flex-justify-center flex-items-center width-full" style="min-height:100px" role="presentation" hidden="" _msthidden="1">
-    <span data-view-component="true" _msthidden="1">
-  <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" data-view-component="true" class="octospinner mx-auto anim-rotate">
-    <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none"></circle>
-    <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-</svg>    <span class="sr-only" _msttexthash="92391" _msthidden="1" _msthash="216">Loading</span>
-</span>
-  </span>
+   
 <div class="js-render-enrichment-fallback" _msthidden="1"><div class="render-plaintext-hidden" dir="auto" _msthidden="1">
       <pre lang="mermaid" aria-label="Raw mermaid code" _msthidden="A" _mstaria-label="254033" _msthash="217">graph TD
 A[Download DeepSeek Model] --&gt; B[Convert to ONNX]
