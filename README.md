@@ -115,40 +115,63 @@ implementation <span class="pl-s"><span class="pl-pds">'</span>org.tensorflow:te
 }
 
 @Composable
-<span class="pl-k">fun</span> <span class="pl-en">ChatScreen</span>() {
-    <span class="pl-k">var</span> userInput by remember { mutableStateOf(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>) }
-    <span class="pl-k">var</span> response by remember { mutableStateOf(<span class="pl-s"><span class="pl-pds">"</span>Hi! How can I help you?<span class="pl-pds">"</span></span>) }
+ import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-    <span class="pl-en">Column</span>(
-        modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.fillMaxSize().padding(<span class="pl-c1">16</span>.dp),
-        verticalArrangement <span class="pl-k">=</span> <span class="pl-en">Arrangement</span>.<span class="pl-en">SpaceBetween</span>
-    ) {
-        <span class="pl-en">Text</span>(
-            text <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Chat with DeepSeek AI<span class="pl-pds">"</span></span>,
-            style <span class="pl-k">=</span> <span class="pl-en">MaterialTheme</span>.typography.headlineMedium,
-            modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.padding(bottom <span class="pl-k">=</span> <span class="pl-c1">8</span>.dp)
-        )
-        <span class="pl-en">Column</span>(
-            modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.weight(<span class="pl-c1">1f</span>).padding(bottom <span class="pl-k">=</span> <span class="pl-c1">16</span>.dp)
-        ) {
-            <span class="pl-en">Text</span>(text <span class="pl-k">=</span> response, modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.fillMaxWidth().padding(<span class="pl-c1">8</span>.dp))
-        }
-        <span class="pl-en">BasicTextField</span>(
-            value <span class="pl-k">=</span> userInput,
-            onValueChange <span class="pl-k">=</span> { userInput <span class="pl-k">=</span> it },
-            modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.fillMaxWidth().padding(<span class="pl-c1">8</span>.dp)
-        )
-        <span class="pl-en">Button</span>(
-            onClick <span class="pl-k">=</span> {
-                <span class="pl-c"><span class="pl-c">//</span> Call the TFLite model for a response</span>
-                response <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Model processing: <span class="pl-e">$userInput</span><span class="pl-pds">"</span></span>
-            },
-            modifier <span class="pl-k">=</span> <span class="pl-en">Modifier</span>.fillMaxWidth()
-        ) {
-            <span class="pl-en">Text</span>(text <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Send<span class="pl-pds">"</span></span>)
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ChatScreen()
         }
     }
-}</pre><div class="zeroclipboard-container">
+}
+
+@Composable
+fun ChatScreen() {
+    var userInput by remember { mutableStateOf("") }
+    var response by remember { mutableStateOf("Hi! How can I help you?") }
+
+    Column(
+        modifier = Modifier.fillMaxSize().padding(16.dp),
+        verticalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(
+            text = "Chat with DeepSeek AI",
+            style = MaterialTheme.typography.headlineMedium,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+        Column(
+            modifier = Modifier.weight(1f).padding(bottom = 16.dp)
+        ) {
+            Text(text = response, modifier = Modifier.fillMaxWidth().padding(8.dp))
+        }
+        BasicTextField(
+            value = userInput,
+            onValueChange = { userInput = it },
+            modifier = Modifier.fillMaxWidth().padding(8.dp)
+        )
+        Button(
+            onClick = {
+                // Call the TFLite model for a response
+                response = "Model processing: $userInput"
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Send")
+        }
+    }
+}
    
   </div></div>
 <hr>
